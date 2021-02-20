@@ -1,0 +1,1 @@
+print("qwerty"[::-1])
