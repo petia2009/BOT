@@ -5,6 +5,10 @@ from game.game import Game
 
 bot = commands.Bot(command_prefix=".")
 
+config_file = open('config.txt', 'r')
+KEY = config_file.readline()
+config_file.close()
+
 GAME: Game = None
 PLAYER_BOT: Bot = None
 PLAYER_CLIENT: Player = None
@@ -152,4 +156,4 @@ async def _rules(ctx):
     )
     await ctx.send(embed=embed)
 
-bot.run("NzkwNTc5NDUzNTkxNjgzMTEy.X-CqfQ.LEoyOPgr582syFTMj61haMtQmEw")
+bot.run(KEY)
